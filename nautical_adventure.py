@@ -62,10 +62,20 @@ def main():
     wind = Wind(-14, 14)
     wind_gauge = WindGauge([x_screen_size/2, y_screen_size - 76], wind.min, wind.max, small_font)
 
+    # ------------------------------------------------------------------------------------------------
+    # Challenge 2
+    #
+    # Add a new trade good to the game below.
+    #
+    # Hints
+    # - Add your new good to the list.
+    # - The second parameter is the base range of values that the trade good can be worth in the game
+    # ------------------------------------------------------------------------------------------------
+
     all_tradeable_goods = [TradeGood("Banana", [5, 7]), TradeGood("Tobacco", [10, 15]),
                            TradeGood("Timber", [1, 3]), TradeGood("Sugar", [8, 12]),
                            TradeGood("Coffee", [10, 12]), TradeGood("Furs", [7, 9]),
-                           TradeGood("Spices", [20, 30]), TradeGood("Gems", [50, 75])]
+                           TradeGood("Spices", [20, 30])]
     tiled_level = TiledLevel([64, 64], all_tile_sprites, all_top_tile_sprites,
                              screen_data, all_tradeable_goods)
     tiled_level.load_tiles()
